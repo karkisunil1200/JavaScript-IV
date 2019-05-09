@@ -32,8 +32,8 @@ class Student extends Person {
     this.className = attributes.className;
     this.favSubjects = attributes.favSubjects;
   }
-  listSubjects(subjects) {
-    return subjects.forEach(subject);
+  listSubjects() {
+    return this.favSubjects;
   }
   PRAssingments(subject) {
     return `${this.name} has submitted a PR for ${subject}`;
