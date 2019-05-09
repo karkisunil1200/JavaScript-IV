@@ -38,7 +38,7 @@ class GameObject {
   constructor(att) {
     this.createdAt = att.createdAt;
     this.name = att.name;
-    this.dimension = att.deminsion;
+    this.dimensions = att.dimensions;
   }
   destroy() {
     return `${this.name} was removed from the game`;
@@ -63,7 +63,7 @@ class GameObject {
     */
 
 class CharacterStats extends GameObject {
-  construction(stats) {
+  constructor(stats) {
     super(stats);
     this.healthPoints = stats.healthPoints;
   }
@@ -100,6 +100,7 @@ Humanoid.prototype.greet = function() {
 class Humanoid extends CharacterStats {
   constructor(char) {
     super(char);
+
     this.team = char.team;
     this.weapons = char.weapons;
     this.language = char.language;
